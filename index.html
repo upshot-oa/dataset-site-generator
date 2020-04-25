@@ -40,31 +40,47 @@
     <!-- JSON-LD conforming to Google Structured Data specification. -->
     <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Dataset",
-      "name" : "Upshot Activities and Sessions",
-      "id": "https://openactive.upshot.org.uk/",
+      "@context": [
+        "https://schema.org/",
+        "https://openactive.io/"
+      ],
+      "@type": "Dataset",
+      "@id": "https://openactive.upshot.org.uk/",
       "url": "https://openactive.upshot.org.uk/",
-      "description" : "Public session data from the Upshot system; published using OpenActive RPDE v1.0.",
+      "name": "Upshot Activities and Sessions",
+      "description": "Public session data from the Upshot system; published using OpenActive RPDE v1.0.",
       "keywords":[
-         "Manage",
-         "Monitor",
-         "OpenActive"
+          "Manage",
+          "Monitor",
+          "OpenActive"
       ],
       "license" : "https://creativecommons.org/licenses/by/4.0/",
-      "distribution" : {
-        "@type" : "DataDownload",
-        "encodingFormat" : "application/vnd.openactive.rpde+json; version=1.0",
-        "contentUrl" : "https://app.upshot.org.uk/api/v0/openactive/v1.0/"
-      },
-      "inLanguage": "en-GB",
+      "distribution": [
+        {
+          "@type" : "DataDownload",
+          "encodingFormat" : "application/vnd.openactive.rpde+json; version={rpdeversion}",
+          "contentUrl" : "https://app.upshot.org.uk/api/v0/openactive/v1.0/"
+        }
+      ],
+      "discussionUrl": "https://github.com/upshot-oa/opendata/issues",
+      "documentation": "https://github.com/upshot-oa/opendata",
+      "inLanguage": [
+        "en-GB"
+      ],
       "publisher": {
-         "@type": "Organization", 
-         "name": "Upshot",
-         "url": "http://upshot.org.uk/",
-         "logo": "https://openactive.upshot.org.uk/images/logo.png"
+        "@type": "Organization",
+        "name": "Upshot",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://openactive.upshot.org.uk/images/logo.png"
+        },
+        "url": "http://upshot.org.uk/"
       },
-      "datePublished" : "2016-09-23T00:00:00.000Z"
+      "datePublished": "2016-09-23T00:00:00.000Z",
+      "backgroundImage": {
+        "@type": "ImageObject",
+        "url": "https://openactive.upshot.org.uk/images/bg.jpg"
+      }
     }
     </script>
   </head>
